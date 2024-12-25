@@ -1,0 +1,483 @@
+<div class="mainContainer">
+    <div class="header">
+        <h2>Book the taxi</h2>
+    </div>
+
+    <div class="bodyContainer">
+        <div class="bookingAndMapViewContainer">
+            <div class="bookingContainer">
+                <p><b>Note:</b> Please put exact location below in order to avoid extra fare calculation.</p>
+                <form action="" >
+                    <div class="inputPlace">
+                    <mat-form-field appearance="outline" class="custom-form-field">
+                        <mat-label>Pickup Location</mat-label>
+                        <input type="text" matInput id="pickup">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Drop Off Location</mat-label>
+                        <input type="text" matInput id="drop">
+                    </mat-form-field>
+
+                </div>
+                <b><p id="distance">Total Distance :-</p></b>
+
+                    <p> Scehduled at (DD/MM/YY)
+                    </p>
+                    <mat-form-field appearance="outline" class="dateFormField">
+                        <input type="date" matInput>
+                    </mat-form-field>
+            
+                <div class="carContainer">
+                    <mat-card class="card">
+
+                        <img mat-card-image src="/assets/sedan.png">
+
+                        <!-- <mat-card-header> -->
+                            <h2 class="carName">Sedan(AC)</h2>
+                        <!-- </mat-card-header> -->
+                        <hr class="horizontalLine" />
+
+                        <mat-card-content>
+                            <h3>Total Fare  <span>NA</span></h3>
+                            <h3>Advance <span>&#8377;0</span></h3>
+                            <button mat-flat-button color="primary">Book Now</button>                       
+                         </mat-card-content>
+                    </mat-card>
+
+                    <mat-card class="card">
+
+                        <img mat-card-image src="/assets/suv.png">
+
+                        <!-- <mat-card-header> -->
+                            <h2 class="carName">SUV(AC)</h2>
+                        <!-- </mat-card-header> -->
+                        <hr class="horizontalLine" />
+
+                        <mat-card-content>
+                            <h3>Total Fare  <span>NA</span></h3>
+                            <h3>Advance <span>&#8377;0</span></h3>
+                            <button mat-flat-button color="primary">Book Now</button>                        </mat-card-content>
+
+                    </mat-card>
+
+                    <mat-card class="card">
+
+                        <img mat-card-image src="/assets/innova.png">
+
+                        <!-- <mat-card-header> -->
+                            <h2 class="carName">Innova(AC)</h2>
+                        <!-- </mat-card-header> -->
+                        <hr class="horizontalLine" />
+
+                        <mat-card-content>
+                            <h3>Total Fare  <span>NA</span></h3>
+                            <h3>Advance <span>&#8377;0</span></h3>
+                            <button mat-flat-button color="primary">Book Now</button>                        
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+                <div class="inputPlace">
+                <mat-form-field appearance="outline">
+                    <mat-label>Mobile Number</mat-label>
+                    <input type="text" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label> Enter Name</mat-label>
+                    <input type="text" matInput>
+                </mat-form-field>
+            </div>
+
+            </form>
+
+                <h2 for="">Select Payment Method</h2>
+                <div class="paymentContainer">
+                <mat-radio-group >
+                    <div>
+                        <mat-radio-button value="1">Pay Full Payment Online</mat-radio-button>
+                    </div>  
+                    <div>
+                        <mat-radio-button value="2">Pay Advance Payment Online</mat-radio-button>
+                    </div>
+                </mat-radio-group>
+            </div>
+
+                <button mat-raised-button (click)="calculateRoute()">Add Request</button>
+            </div>
+
+            <div class="mapViewContainer">
+                <div #mapElement style="height: 500px; width: 100%;"></div>
+            </div>
+        </div>
+
+        <div class="advertiseContainer">
+            <h1>Book Outstation Taxi, Cabs in India at Best Price</h1>
+
+            <div class="advertiseCardContainer">
+
+                <mat-card>
+                    <img src="" alt="" mat-card-image>
+                    <mat-card-content>
+                        <h2>No return fare</h2>
+                        <p>
+                            Why pay twice for the One way cab! Taxi providers are ready for a one-way ride as they find
+                            another customer returning.
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+
+                <mat-card>
+                    <img src="" alt="" mat-card-image>
+                    <mat-card-content>
+                        <h2>No Over Pricing</h2>
+                        <p>
+                            Find the cheapest price for your trip. A large pool of Outstation taxi providers is waiting
+                            to offer you the best at the lowest price.
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+
+                <mat-card>
+                    <img src="" alt="" mat-card-image>
+                    <mat-card-content>
+                        <h2>Availability of Cabs</h2>
+                        <p>
+                            Holiday season! Your favorite taxi provider refuses to provide you with a taxi. No worries,
+                            Goodluck Taxi brings you thousands of taxi providers to your destination.
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+
+            <div class="mainAdvertiseContainer">
+                <div class="leftSideContainer">
+                    <img src="" alt="">
+                </div>
+                <div class="rightSideContainer">
+                    <h1>GoodLuck Taxi</h1>
+
+                    <h3>We Strive to make the taxi booking an easy and comfortable experience through our online cab
+                        booking service</h3>
+
+                    <h2>User Apps</h2>
+                    <img src="" alt="">
+
+                    <h2>Provider App</h2>
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="predefinedToursContainer">
+            <mat-card>
+                <mat-card-header>
+                    <h3>Cab From Nashik</h3>
+                </mat-card-header>
+
+                <mat-card-content class="predefinedToursContainerCard">
+                    Nashik to Ahmednagar Cab <br>
+                    Nashik to Ahmedabad Cab <br>
+                    Nashik to Akola Cab <br>
+                    Nashik to Aurangabad Cab <br>
+                    Nashik to Dhule Cab <br>
+                    Nashik to Jalna Cab <br>
+                    Nashik to Parbhani Cab <br>
+                    Nashik to Pimpri Cab <br>
+                    Nashik to Pune Cab <br>
+                    Nashik to Shirdi Cab <br>
+                    Nashik to Surat Cab <br>
+                    Nashik to Thane Cab <br>
+                    Nashik to Ulhasnagar Cab <br>
+                    Nashik to Vadodara Cab <br>
+                    Nashik to Jalgaon Cab <br>
+                    Nashik to Malegaon Cab <br>
+                    Nashik to Mumbai Cab <br>
+                    Nashik to Igatpuri Cab <br>
+                    Nashik to Indore Cab <br>
+                    Nashik to Shrirampur Cab <br>
+                    Nashik to Silvassa Cab
+                </mat-card-content>
+            </mat-card>
+
+            <mat-card>
+                <mat-card-header>
+                    <h3>Cab From Nashik</h3>
+                </mat-card-header>
+
+                <mat-card-content class="predefinedToursContainerCard">
+                    Nashik to Ahmednagar Cab <br>
+                    Nashik to Ahmedabad Cab <br>
+                    Nashik to Akola Cab <br>
+                    Nashik to Aurangabad Cab <br>
+                    Nashik to Dhule Cab <br>
+                    Nashik to Jalna Cab <br>
+                    Nashik to Parbhani Cab <br>
+                    Nashik to Pimpri Cab <br>
+                    Nashik to Pune Cab <br>
+                    Nashik to Shirdi Cab <br>
+                    Nashik to Surat Cab <br>
+                    Nashik to Thane Cab <br>
+                    Nashik to Ulhasnagar Cab <br>
+                    Nashik to Vadodara Cab <br>
+                    Nashik to Jalgaon Cab <br>
+                    Nashik to Malegaon Cab <br>
+                    Nashik to Mumbai Cab <br>
+                    Nashik to Igatpuri Cab <br>
+                    Nashik to Indore Cab <br>
+                    Nashik to Shrirampur Cab <br>
+                    Nashik to Silvassa Cab
+                </mat-card-content>
+            </mat-card>
+
+
+            <mat-card>
+                <mat-card-header>
+                    <h3>Cab From Pune</h3>
+                </mat-card-header>
+
+                <mat-card-content class="predefinedToursContainerCard">
+                    Pune to Ahmednagar Cab <br>
+                    Pune to Ahmedabad Cab <br>
+                    Pune to Akola Cab <br>
+                    Pune to Aurangabad Cab <br>
+                    Pune to Dhule Cab <br>
+                    Pune to Jalna Cab <br>
+                    Pune to Parbhani Cab <br>
+                    Pune to Pimpri Cab <br>
+                    Pune to Pune Cab <br>
+                    Pune to Shirdi Cab <br>
+                    Pune to Surat Cab <br>
+                    Pune to Thane Cab <br>
+                    Pune to Ulhasnagar Cab <br>
+                    Pune to Vadodara Cab <br>
+                    Pune to Jalgaon Cab <br>
+                    Pune to Malegaon Cab <br>
+                    Pune to Mumbai Cab <br>
+                    Pune to Igatpuri Cab <br>
+                    Pune to Indore Cab <br>
+                    Pune to Shrirampur Cab <br>
+                    Pune to Silvassa Cab
+                </mat-card-content>
+            </mat-card>
+
+            <mat-card>
+                <mat-card-header>
+                    <h3>Cab From Mumbai</h3>
+                </mat-card-header>
+
+                <mat-card-content class="predefinedToursContainerCard">
+                    Mumbai to Ahmednagar Cab <br>
+                    Mumbai to Ahmedabad Cab <br>
+                    Mumbai to Akola Cab <br>
+                    Mumbai to Aurangabad Cab <br>
+                    Mumbai to Dhule Cab <br>
+                    Mumbai to Jalna Cab <br>
+                    Mumbai to Parbhani Cab <br>
+                    Mumbai to Pimpri Cab <br>
+                    Mumbai to Pune Cab <br>
+                    Mumbai to Shirdi Cab <br>
+                    Mumbai to Surat Cab <br>
+                    Mumbai to Thane Cab <br>
+                    Mumbai to Ulhasnagar Cab <br>
+                    Mumbai to Vadodara Cab <br>
+                    Mumbai to Jalgaon Cab <br>
+                    Mumbai to Malegaon Cab <br>
+                    Mumbai to Mumbai Cab <br>
+                    Mumbai to Igatpuri Cab <br>
+                    Mumbai to Indore Cab <br>
+                    Mumbai to Shrirampur Cab <br>
+                    Mumbai to Silvassa Cab
+                </mat-card-content>
+            </mat-card>
+
+            <mat-card>
+                <mat-card-header>
+                    <h3>Cab From Aurangabad</h3>
+                </mat-card-header>
+
+                <mat-card-content class="predefinedToursContainerCard">
+                    Aurangabad to Ahmednagar Cab <br>
+                    Aurangabad to Ahmedabad Cab <br>
+                    Aurangabad to Akola Cab <br>
+                    Aurangabad to Aurangabad Cab <br>
+                    Aurangabad to Dhule Cab <br>
+                    Aurangabad to Jalna Cab <br>
+                    Aurangabad to Parbhani Cab <br>
+                    Aurangabad to Pimpri Cab <br>
+                    Aurangabad to Pune Cab <br>
+                    Aurangabad to Shirdi Cab <br>
+                    Aurangabad to Surat Cab <br>
+                    Aurangabad to Thane Cab <br>
+                    Aurangabad to Ulhasnagar Cab <br>
+                    Aurangabad to Vadodara Cab <br>
+                    Aurangabad to Jalgaon Cab <br>
+                    Aurangabad to Igatpuri Cab <br>
+                    Aurangabad to Indore Cab <br>
+                    Aurangabad to Shrirampur Cab <br>
+                    Aurangabad to Silvassa Cab
+                </mat-card-content>
+            </mat-card>
+
+
+
+            <mat-card>
+                <mat-card-header>
+                    <h3>Cab From Shirdi</h3>
+                </mat-card-header>
+
+                <mat-card-content class="predefinedToursContainerCard">
+                    Shirdi to Ahmednagar Cab <br>
+                    Shirdi to Ahmedabad Cab <br>
+                    Shirdi to Akola Cab <br>
+                    Shirdi to Aurangabad Cab <br>
+                    Shirdi to Dhule Cab <br>
+                    Shirdi to Jalna Cab <br>
+                    Shirdi to Parbhani Cab <br>
+                    Shirdi to Pimpri Cab <br>
+                    Shirdi to Pune Cab <br>
+                    Shirdi to Shirdi Cab <br>
+                    Shirdi to Surat Cab <br>
+                    Shirdi to Thane Cab <br>
+                    Shirdi to Ulhasnagar Cab <br>
+                    Shirdi to Vadodara Cab <br>
+                    Shirdi to Jalgaon Cab <br>
+                    Shirdi to Malegaon Cab <br>
+                    Shirdi to Mumbai Cab <br>
+                    Shirdi to Igatpuri Cab <br>
+                    Shirdi to Indore Cab <br>
+                    Shirdi to Shrirampur Cab <br>
+                    Shirdi to Silvassa Cab
+                </mat-card-content>
+            </mat-card>
+
+
+            <mat-card>
+                <mat-card-header>
+                    <h3>CAB FROM THANE</h3>
+                </mat-card-header>
+
+                <mat-card-content class="predefinedToursContainerCard">
+                    Thane to Ahmednagar Cab <br>
+                    Thane to Ahmedabad Cab <br>
+                    Thane to Akola Cab <br>
+                    Thane to Aurangabad Cab <br>
+                    Thane to Dhule Cab <br>
+                    Thane to Jalna Cab <br>
+                    Thane to Parbhani Cab <br>
+                    Thane to Pimpri Cab <br>
+                    Thane to Pune Cab <br>
+                    Thane to Shirdi Cab <br>
+                    Thane to Surat Cab <br>
+                    Thane to Thane Cab <br>
+                    Thane to Ulhasnagar Cab <br>
+                    Thane to Vadodara Cab <br>
+                    Thane to Jalgaon Cab <br>
+                    Thane to Malegaon Cab <br>
+                    Thane to Mumbai Cab <br>
+                    Thane to Igatpuri Cab <br>
+                    Thane to Indore Cab <br>
+                    Thane to Shrirampur Cab <br>
+                    Thane to Silvassa Cab
+                </mat-card-content>
+            </mat-card>
+
+
+            
+            <mat-card>
+                <mat-card-header>
+                    <h3>CAB FROM KOLHAPUR</h3>
+                </mat-card-header>
+
+                <mat-card-content class="predefinedToursContainerCard">
+                    Kolhapur to Ahmednagar Cab <br>
+                    Kolhapur to Ahmedabad Cab <br>
+                    Kolhapur to Akola Cab <br>
+                    Kolhapur to Aurangabad Cab <br>
+                    Kolhapur to Dhule Cab <br>
+                    Kolhapur to Jalna Cab <br>
+                    Kolhapur to Parbhani Cab <br>
+                    Kolhapur to Pimpri Cab <br>
+                    Kolhapur to Pune Cab <br>
+                    Kolhapur to Shirdi Cab <br>
+                    Kolhapur to Surat Cab <br>
+                    Kolhapur to Thane Cab <br>
+                    Kolhapur to Ulhasnagar Cab <br>
+                    Kolhapur to Vadodara Cab <br>
+                    Kolhapur to Jalgaon Cab <br>
+                    Kolhapur to Malegaon Cab <br>
+                    Kolhapur to Mumbai Cab <br>
+                    Kolhapur to Igatpuri Cab <br>
+                    Kolhapur to Indore Cab <br>
+                    Kolhapur to Shrirampur Cab <br>
+                    Kolhapur to Silvassa Cab
+                </mat-card-content>
+            </mat-card>
+
+
+
+            
+            <mat-card>
+                <mat-card-header>
+                    <h3>CAB FROM SOLAPUR</h3>
+                </mat-card-header>
+
+                <mat-card-content class="predefinedToursContainerCard">
+                    Solapur to Ahmednagar Cab <br>
+                    Solapur to Ahmedabad Cab <br>
+                    Solapur to Akola Cab <br>
+                    Solapur to Aurangabad Cab <br>
+                    Solapur to Dhule Cab <br>
+                    Solapur to Jalna Cab <br>
+                    Solapur to Parbhani Cab <br>
+                    Solapur to Pimpri Cab <br>
+                    Solapur to Pune Cab <br>
+                    Solapur to Shirdi Cab <br>
+                    Solapur to Surat Cab <br>
+                    Solapur to Thane Cab <br>
+                    Solapur to Ulhasnagar Cab <br>
+                    Solapur to Vadodara Cab <br>
+                    Solapur to Jalgaon Cab <br>
+                    Solapur to Malegaon Cab <br>
+                    Solapur to Mumbai Cab <br>
+                    Solapur to Igatpuri Cab <br>
+                    Solapur to Indore Cab <br>
+                    Solapur to Shrirampur Cab <br>
+                    Solapur to Silvassa Cab
+                </mat-card-content>
+            </mat-card>
+
+
+            
+            <mat-card>
+                <mat-card-header>
+                    <h3>CAB FROM NAGPUR</h3>
+                </mat-card-header>
+
+                <mat-card-content class="predefinedToursContainerCard">
+                    Nagpur to Ahmednagar Cab <br>
+                    Nagpur to Ahmedabad Cab <br>
+                    Nagpur to Akola Cab <br>
+                    Nagpur to Aurangabad Cab <br>
+                    Nagpur to Dhule Cab <br>
+                    Nagpur to Jalna Cab <br>
+                    Nagpur to Parbhani Cab <br>
+                    Nagpur to Pimpri Cab <br>
+                    Nagpur to Pune Cab <br>
+                    Nagpur to Shirdi Cab <br>
+                    Nagpur to Surat Cab <br>
+                    Nagpur to Thane Cab <br>
+                    Nagpur to Ulhasnagar Cab <br>
+                    Nagpur to Vadodara Cab <br>
+                    Nagpur to Jalgaon Cab <br>
+                    Nagpur to Malegaon Cab <br>
+                    Nagpur to Mumbai Cab <br>
+                    Nagpur to Igatpuri Cab <br>
+                    Nagpur to Indore Cab <br>
+                    Nagpur to Shrirampur Cab <br>
+                    Nagpur to Silvassa Cab
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>

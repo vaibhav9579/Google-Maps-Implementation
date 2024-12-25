@@ -1,0 +1,148 @@
+.mainContainer {
+    font-family: 'poppins';
+    padding: 0px !important;
+    margin: 0px !important;
+    /* color: #F5F5F5; */
+}
+
+.header {
+    height: 50px;
+    background-color: black;
+    margin: 0px;
+    color: white;
+    display: flex;
+    padding-left: 20px;
+    justify-content: left;
+    align-items: center;
+    font-weight: 400;
+}
+
+.bookingAndMapViewContainer {
+    min-height: 500px;
+    border: 1px solid black;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.bookingContainer {
+    width: 50%;
+    border: 2px solid black;
+    margin: 5px;
+    /* background-color: #0D47A1; */
+    background-color: #FCD925;
+    /* background-color: #213361; */
+    padding: 10px;
+}
+
+.mapViewContainer {
+    width: 50%;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+.card {
+    height: 180px;
+    width: 30%;
+    border: 1px solid green;
+    font-size: 10px;
+    margin: 20px;
+    text-align: center;
+    /* padding-top: 2px; */
+}
+
+.card h3 {
+    font-family: poppins;
+    line-height: 0.9;
+}
+
+.card img {
+    height: 40px;
+    width: 100px;
+}
+
+.carContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.predefinedToursContainer {
+    background-color: black;
+    color: white;
+}
+
+.predefinedToursContainerCard {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    font-size: 15px;
+}
+
+.predefinedToursContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.inputPlace {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.inputPlace mat-form-field:nth-child(1) {
+    margin-right: 15px;
+}
+
+.dateFormField {
+    margin-top: -15px;
+}
+
+.horizontalLine {
+    margin-top: -15px;
+}
+
+.card {
+    line-height: -2;
+    text-align: center;
+    font-family: 'poppins';
+}
+
+.card .carName {
+    text-align: center;
+    font-family: poppins;
+}
+
+.card h3 span{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* .card button{
+    width: 100%;
+    font-family: poppins;
+} */
+
+.paymentContainer{
+    margin-top: -10px;
+}
+
+.advertiseContainer{
+    padding: 20px;
+}
+
+.advertiseContainer h1{
+    font-size: 50px;
+    margin-top: 10px;
+    font-family: poppins;
+    text-align: center;
+}
+
+.advertiseCardContainer{
+    display: flex;
+}
